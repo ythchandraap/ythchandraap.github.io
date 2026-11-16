@@ -9,132 +9,107 @@ import {
   SiReact,
   SiPython,
   SiTailwindcss,
-  SiFramer,
   SiVuedotjs,
   SiNuxt,
   SiPhp,
+  SiNestjs,
 } from "react-icons/si";
 
 export const personalInfo = {
-  name: "Chandra",
+  name: "Chandra Adam Pratama",
   role: "Fullstack Developer",
-  tagline: "I build systems that scale and interfaces that matter.",
-  basedIn: "Indonesia",
+  tagline:
+    "Crafting scalable backends and seamless user experiences — from hospital systems to fintech platforms.",
+  basedIn: "Yogyakarta, Indonesia",
   experience: "3+",
-  email: "chandra@example.com", // Placeholder email, user can update
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  email: "chandraadampratama@gmail.com",
+  github: "https://github.com/ythchandraap",
+  linkedin: "https://linkedin.com/in/ythchandraap",
+  whatsapp: "https://wa.me/6285700383103",
 };
 
 export const skills = [
-  { name: "Go", icon: SiGo, color: "#00ADD8" },
-  { name: "PHP", icon: SiPhp, color: "#00ADD8" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-  { name: "Vue.js", icon: SiVuedotjs, color: "#06B6D4" },
-  { name: "Nuxt", icon: SiNuxt, color: "#069be4" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-  { name: "Redis", icon: SiRedis, color: "#DC382D" },
-  { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "React", icon: SiReact },
+  { name: "Vue.js", icon: SiVuedotjs },
+  { name: "Nuxt", icon: SiNuxt },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "Nest.js", icon: SiNestjs },
+  { name: "Go", icon: SiGo },
+  { name: "PHP", icon: SiPhp },
+  { name: "MySQL", icon: SiMysql },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Redis", icon: SiRedis },
+  { name: "Tailwind", icon: SiTailwindcss },
+  { name: "Python", icon: SiPython },
 ];
 
 export const projects = [
   {
-    id: 1,
     title: "cashplus.id",
     description:
-      "A robust payment processing platform designed for scalability and security.",
-    tech: ["Go", "Xendit", "PostgreSQL"],
+      "Built responsive, performant interfaces for a fintech partner platform handling pulsa, electricity token, and e-ticket transactions.",
+    tech: ["Next.js", "React", "TypeScript", "REST API"],
     link: "https://cashplus.id",
-    github: "#",
-    image: "/projects/cashplus.jpg", // Placeholders
-    featured: true,
   },
   {
-    id: 2,
+    title: "Campaign Ads Manager",
+    description:
+      "A fintech payment platform serving thousands of users across Indonesia, with responsive interfaces integrated into real-time transaction flows.",
+    tech: ["Next.js", "React", "TypeScript", "REST API"],
+    link: "https://pandora.kuwakuwi.id",
+  },
+  {
+    title: "Hospital Information System — RSUD Prambanan",
+    description:
+      "End-to-end system for patient management, medical records, and internal reporting, supporting daily operations for hundreds of medical staff.",
+    tech: ["Next.js", "PHP", "CodeIgniter", "MySQL"],
+  },
+  {
     title: "onetap.id",
     description:
-      "Fullstack SaaS product streamlining user engagement and digital interactions.",
-    tech: ["Next.js", "Node.js", "MySQL"],
+      "Digital marketplace for creators and entrepreneurs. Built backend services in Go with PostgreSQL and Redis for product distribution and transactions.",
+    tech: ["Go", "PostgreSQL", "Redis", "REST API"],
     link: "https://onetap.id",
-    github: "#",
-    image: "/projects/onetap.jpg",
-    featured: true,
   },
   {
-    id: 3,
-    title: "BPJS/INACBG Integration",
+    title: "IoT Room Temperature Monitoring",
     description:
-      "Healthcare claims system modernization, migrating from legacy PHP to high-performance Go.",
-    tech: ["Go", "PHP", "Healthcare API"],
-    link: "#",
-    github: "#",
-    image: "/projects/bpjs.jpg",
-  },
-  {
-    id: 4,
-    title: "Internal Business Management Tool",
-    description:
-      "Comprehensive CRM and ERP system for campaign management and HR processes.",
-    tech: ["Next.js", "MySQL", "shadcn/ui"],
-    link: "#",
-    github: "#",
-    image: "/projects/internal.jpg",
-  },
-  {
-    id: 5,
-    title: "XAU/USD Trading Bot",
-    description:
-      "Automated gold trading system leveraging MT5 and Machine Learning for market analysis.",
-    tech: ["Go", "Python", "MT5", "ML"],
-    link: "#",
-    github: "#",
-    image: "/projects/trading-bot.jpg",
-  },
-  {
-    id: 6,
-    title: "MT5 Pattern Scanner",
-    description:
-      "Real-time candlestick pattern detection with automated Telegram alerts.",
-    tech: ["Python", "MT5", "Telegram API"],
-    link: "#",
-    github: "#",
-    image: "/projects/scanner.jpg",
+      "Web application for real-time room temperature monitoring, including client demos, installation, and enterprise onboarding.",
+    tech: ["PHP", "MySQL", "IoT"],
   },
 ];
 
 export const experiences = [
   {
-    company: "Freelance / Remote",
-    role: "Fullstack Developer",
-    period: "2023 - Present",
+    company: "RSUD Prambanan",
+    role: "Full Stack Engineer",
+    period: "Sep 2023 — Present",
     description: [
-      "Building scalable web applications and automated trading systems.",
-      "Specializing in Go and Next.js ecosystems.",
-      "Delivering high-performance solutions for international clients.",
+      "Architected and developed the front end and back end of a hospital application used by medical and administrative staff.",
+      "Analyzed system data to refine data models and improve reliability across clinical workflows.",
+      "Maintained legacy CodeIgniter (PHP) information systems to keep hospital operations running.",
     ],
   },
   {
-    company: "Tech Solutions Co.",
-    role: "Backend Engineer",
-    period: "2021 - 2023",
+    company: "PT Global Indo Multimedia (cashplus.id)",
+    role: "Front End Developer",
+    period: "Jun 2022 — Aug 2023",
     description: [
-      "Led the migration of legacy healthcare systems to Go.",
-      "Optimized database queries and implemented caching strategies using Redis.",
-      "Integrated third-party payment gateways and healthcare APIs.",
+      "Built responsive Next.js interfaces for a fintech platform serving partner businesses.",
+      "Delivered product features for partners to manage and operate their sales channels.",
+      "Maintained and improved performance across the cashplus.id platform.",
     ],
   },
   {
-    company: "Digital Agency",
-    role: "Junior Developer",
-    period: "2020 - 2021",
+    company: "CV Sahabat",
+    role: "IT Support & Junior Developer",
+    period: "Aug 2019 — May 2022",
     description: [
-      "Developed responsive frontend interfaces using React and Tailwind CSS.",
-      "Maintained and updated Node.js backend services.",
-      "Collaborated with designers to implement pixel-perfect designs.",
+      "Helped build a web application for IoT-based room temperature monitoring.",
+      "Demonstrated products and handled software installation and database setup for clients.",
+      "Supported client onboarding by connecting technical and non-technical teams.",
     ],
   },
 ];

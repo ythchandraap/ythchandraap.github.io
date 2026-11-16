@@ -1,69 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0a;
-  --color-foreground: #ffffff;
-  --color-accent: #6366f1;
-  --color-accent-secondary: #22d3ee;
-  
-  --font-display: var(--font-syne), "Clash Display", sans-serif;
-  --font-sans: var(--font-geist-sans), "DM Sans", sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --color-background: #faf7f3;
+  --color-foreground: #211f22;
+  --color-accent: #bda0f6;
+  --color-accent-secondary: #dff174;
+  --font-display: system-ui, sans-serif;
+  --font-sans: system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --accent: #6366f1;
+  --background: #faf7f3;
+  --foreground: #211f22;
+  --line: #211f22;
 }
 
-@layer base {
-  * {
-    @apply border-white/10;
-  }
-  
-  body {
-    @apply bg-background text-foreground font-sans selection:bg-accent/30 selection:text-white antialiased overflow-x-hidden;
-  }
+* { box-sizing: border-box; }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
-  }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #c8a9f5;
+  color: var(--foreground);
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .noise-bg {
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-    filter: contrast(170%) brightness(1000%);
-  }
-  
-  .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-secondary;
-  }
+.portfolio-frame {
+  width: min(70rem, calc(100% - 3rem));
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--background);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+.content-wrap {
+  width: min(100% - 3rem, 62rem);
+  margin-inline: auto;
 }
 
-/* Page transitions */
-.page-enter {
-  opacity: 0;
-  transform: translateY(10px);
+::selection { background: #c8a9f5; color: #211f22; }
+
+:focus-visible { outline: 3px solid #6f4bb0; outline-offset: 3px; }
+
+@media (max-width: 720px) {
+  body { background: var(--background); }
+  .portfolio-frame {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .content-wrap { width: min(100% - 2rem, 62rem); }
 }
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
 }

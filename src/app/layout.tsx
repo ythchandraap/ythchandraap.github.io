@@ -1,38 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Syne } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Chandra | Fullstack Developer",
-  description: "Premium portfolio of Chandra, a Fullstack Developer specializing in Go, Node.js, and React.",
-  keywords: ["Fullstack Developer", "Go", "Next.js", "TypeScript", "Indonesia"],
-  authors: [{ name: "Chandra" }],
+  metadataBase: new URL("https://ythchandraap.github.io"),
+  title: "Chandra Adam Pratama | Fullstack Developer",
+  description:
+    "Fullstack developer in Yogyakarta building web products across hospital systems, fintech, and data-driven workflows.",
+  keywords: ["Fullstack Developer", "Go", "Next.js", "TypeScript", "Yogyakarta"],
+  authors: [{ name: "Chandra Adam Pratama" }],
   openGraph: {
-    title: "Chandra | Fullstack Developer",
-    description: "I build systems that scale and interfaces that matter.",
-    url: "https://chandra.dev", // Placeholder
-    siteName: "Chandra Portfolio",
+    title: "Chandra Adam Pratama | Fullstack Developer",
+    description:
+      "Building scalable backends and seamless user experiences across healthcare and fintech.",
+    url: "https://ythchandraap.github.io",
+    siteName: "Chandra Adam Pratama",
     locale: "en_US",
     type: "website",
   },
 };
-
-import CustomCursor from "@/components/ui/CustomCursor";
 
 export default function RootLayout({
   children,
@@ -40,21 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} font-sans bg-background text-foreground selection:bg-accent/30 selection:text-white antialiased`}
-      >
-        <CustomCursor />
-        {/* Noise Texture Overlay */}
-        <div className="fixed inset-0 z-[9999] pointer-events-none opacity-[0.03] noise-bg" />
-        
-        {/* Animated Background Mesh */}
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/20 blur-[120px] animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent-secondary/10 blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
-        </div>
-
-        <main className="relative z-10">
+    <html lang="en">
+      <body>
+        <a
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2"
+          href="#main-content"
+        >
+          Skip to content
+        </a>
+        <main id="main-content" className="portfolio-frame">
           {children}
         </main>
       </body>
